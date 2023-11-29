@@ -1,0 +1,32 @@
+---
+title: "LesMisEdit"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(rio)
+```
+
+```{r}
+# Your input text
+text <- readLines("Les-Mis.txt")
+
+# Identify lines starting with "CHAPTER"
+is_chapter_line <- grepl("^CHAPTER [IVXLCDM]+—[A-Z][A-Z A-Z]+", text)
+
+# Create a logical vector indicating lines to keep
+lines_to_keep <- !is_chapter_line
+
+# Extract and concatenate the lines to keep
+cleaned_text <- text[lines_to_keep]
+
+# Specify the file path for the new text file
+output_file <- "Les-Mis2.txt"
+
+# Write the cleaned text to the new file
+writeLines(cleaned_text, con = output_file)
+
+
+```
