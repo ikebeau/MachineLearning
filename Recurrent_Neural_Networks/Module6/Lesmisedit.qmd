@@ -30,3 +30,64 @@ writeLines(cleaned_text, con = output_file)
 
 
 ```
+
+```{r}
+
+
+Page_Number_Remover <- function(input_file) {
+  # Read lines from the input file
+  text2 <- readLines(input_file)
+  
+  # Check if each line starts with a page number
+  is_page_line <- grepl("^[0-9]+", text2)
+  
+  # Invert the logical values to keep lines without page numbers
+  lines_to_keep <- !is_page_line
+  
+  # Create the output file name by appending "2" to the input file name
+  output_file <- paste0(tools::file_path_sans_ext(input_file), "2", tools::file_ext(input_file))
+  
+  # Write the cleaned text to the output file
+  writeLines(text2[lines_to_keep], con = output_file)
+  
+  # Print a message indicating the operation is complete
+  cat("Page numbers removed. Cleaned text saved to", output_file, "\n")
+}
+
+```
+
+```{r}
+Page_Number_Remover("EndersGame.txt")
+```
+
+```{r}
+Remove_Chapters <- function(input_file) {
+  # Read lines from the input file
+  text2 <- readLines(input_file)
+  
+  # Identify lines starting with a number
+  is_chapter_line <- grepl("^[0-9]+", text2)
+  
+  # Identify lines with an all caps title
+  is_title_line <- grepl("^[A-Z]+$", text2)
+  
+  # Identify lines with both a number and a title on the next line
+  lines_to_remove <- is_chapter_line & c(FALSE, head(is_title_line, -1))
+  
+  # Invert the logical values to keep lines without chapters
+  lines_to_keep <- !lines_to_remove
+  
+  # Create the output file name by appending "_NoChapters" to the input file name
+  output_file <- paste0(tools::file_path_sans_ext(input_file), "_NoChapters", tools::file_ext(input_file))
+  
+  # Write the cleaned text to the output file
+  writeLines(text2[lines_to_keep], con = output_file)
+  
+  # Print a message indicating the operation is complete
+  cat("Chapters removed. Cleaned text saved to", output_file, "\n")
+}
+```
+
+```{r}
+Remove_Chapter_Titles("EndersShadow.txt")
+```

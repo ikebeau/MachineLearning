@@ -1,0 +1,131 @@
+---
+title: "Machine Learning"
+author: "Isaac Beaumont"
+date: "2023-12-01"
+output: html_document
+---
+
+# Model Types {.tabset .tabset-pills}
+
+## Supervised Learning: {.tabset .tabset-pills}
+
+### Benefits:
+
+Clear Objectives: Suitable when the task involves clear predictions or classifications with labeled data, such as image recognition or spam detection.
+
+Feedback Mechanism: When continuous improvement and adjustment based on explicit feedback are crucial, supervised learning is the preferred choice.
+
+Well-understood Performance Metrics: Ideal when well-defined metrics like accuracy or precision are necessary for assessing model performance.
+
+Broad Applicability: Appropriate for a wide range of tasks where input-output relationships can be learned from labeled data.
+
+Availability of Diverse Algorithms: Choose supervised learning when there is a need for flexibility in selecting algorithms tailored to specific problems.
+
+### Common Models:
+
+Linear Regression
+Logistic Regression
+Support Vector Machines (SVM)
+Decision Trees
+Random Forests
+
+## Unsupervised Learning: {.tabset .tabset-pills}
+
+### Benefits:
+
+Discovery of Patterns: Optimal when the goal is to uncover hidden patterns or structures within the data without predefined labels.
+
+Data Exploration: Useful for exploring datasets without clear labels, enabling insights and potential feature engineering for future supervised learning tasks.
+
+Anomaly Detection: Suitable for identifying anomalies or outliers within the data without relying on labeled examples.
+
+Clustering: When the objective is to organize similar data points into groups, unsupervised learning through clustering is the method of choice.
+
+Reduced Dependency on Labeled Data: Prefer unsupervised learning when labeled data is scarce or unavailable.
+
+### Common Models:
+
+K-Means Clustering
+Hierarchical Clustering
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+Principal Component Analysis (PCA)
+t-Distributed Stochastic Neighbor Embedding (t-SNE)
+
+## Reinforcement Learning: {.tabset .tabset-pills}
+
+### Benefits:
+
+Sequential Decision Making: Appropriate for scenarios involving sequential decision-making, where actions impact future states.
+
+Adaptability: Use reinforcement learning when the model needs to learn and adapt its behavior based on feedback received through rewards or penalties.
+
+Simulation Environments: Ideal for training in simulated environments, allowing for safe exploration and learning without real-world consequences.
+
+Complex Strategies: When the task requires learning complex strategies and policies for optimal decision-making, reinforcement learning is the preferred choice.
+
+Autonomy: Choose reinforcement learning when autonomy is crucial, and the model needs to operate independently in dynamic and changing environments.
+
+Common Models:
+
+Q-Learning
+Deep Q Network (DQN)
+Policy Gradient Methods
+Actor-Critic Models
+Proximal Policy Optimization (PPO)
+
+## Classification Models: {.tabset .tabset-pills}
+
+### Common Models:
+
+Logistic Regression
+Support Vector Machines (SVM)
+Naive Bayes
+K-Nearest Neighbors (KNN)
+Decision Trees
+
+## Regression Models:
+
+### Common Models:
+
+Linear Regression
+Decision Trees
+Random Forests
+Gradient Boosting
+Lasso Regression
+
+## Clustering: {.tabset .tabset-pills}
+
+### Common Models:
+
+K-Means Clustering
+Hierarchical Clustering
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+Gaussian Mixture Model (GMM)
+Agglomerative Clustering
+
+## Dimensionality Reduction: {.tabset .tabset-pills}
+
+### Common Models:
+
+Principal Component Analysis (PCA)
+t-Distributed Stochastic Neighbor Embedding (t-SNE)
+Autoencoders
+Linear Discriminant Analysis (LDA)
+Factor Analysis
+
+## Deep Learning: {.tabset .tabset-pills}
+
+### Common Models:
+
+Autoencoders
+
+Boltzmann Machine
+
+Convolutional Neural Networks (CNN)
+
+Multi-layer Perceptron (MLP)
+
+Recurrent Neural Networks (RNN)
+
+
+Note: The selection of a particular model type depends on the specific requirements of the task, the nature of the data, and the goals of the machine learning project. It's often beneficial to experiment with different models and evaluate their performance to determine the most suitable approach.
